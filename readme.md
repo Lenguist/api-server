@@ -5,14 +5,9 @@ input format:
 }
 
 
-docker build --tag basic-server-docker .
-docker run basic-server-docker
-docker run -d -p 5000:5000 lenguist/predict-from-allen:latest
 
-docker build -t lenguist/predict-from-python:latest .
+docker build -t lenguist/server-1.0:latest .
 
-docker run -d -p 5000:5000 lenguist/ukramarly-app-v0.1:latest
+docker run -d -p 5000:5000 lenguist/server-1.0:latest
 
-docker push lenguist/predict-latest:latest
-
-docker build -t lenguist/ukramarly-app-v0.1:latest .
+docker push lenguist/server-1.0:latest
